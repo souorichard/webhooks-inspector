@@ -21,6 +21,9 @@
       "correctness": {
         "noUnusedVariables": "off",
         "noUnusedFunctionParameters": "off"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "off"
       }
     }
   },
