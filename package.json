@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "webhook-inspector",
+  "version": "1.0.0",
+  "description": "",
+  "workspaces": [
+    "apps"
+  ],
+  "packageManager": "pnpm@10.30.0",
+  "devDependencies": {
+    "@biomejs/biome": "2.4.0",
+    "@types/pg": "^8.16.0",
+    "drizzle-kit": "^0.31.9"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.2.0",
+    "@fastify/swagger": "^9.7.0",
+    "@scalar/fastify-api-reference": "^1.44.20",
+    "drizzle-orm": "^0.45.1",
+    "drizzle-zod": "^0.8.3",
+    "fastify-type-provider-zod": "^6.1.0",
+    "pg": "^8.18.0",
+    "zod": "^4.3.6"
+  }
+}
