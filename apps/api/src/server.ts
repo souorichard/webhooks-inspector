@@ -8,6 +8,9 @@ import {
   validatorCompiler,
 } from 'fastify-type-provider-zod'
 import { env } from './env'
+import { captureWebhook } from './routes/capture-webhook'
+import { deleteWebhook } from './routes/delete-webhook'
+import { getWebhook } from './routes/get-webhook'
 import { listWebooks } from './routes/list-webhooks'
 
 const app = fastify()
@@ -35,7 +38,11 @@ app.register(fastifySwagger, {
 app.register(ScalarApiReference, {
   routePrefix: '/docs',
 })
+
 app.register(listWebooks)
+app.register(getWebhook)
+app.register(deleteWebhook)
+app.register(captureWebhook)
 
 app
   .listen({
